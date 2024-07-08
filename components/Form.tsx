@@ -12,8 +12,8 @@ import { Textarea } from "./ui/textarea";
 
 const Form = () => {
   return (
-    <div className="w-full sm:w-[80%] mx-auto flex flex-col justify-center items-center">
-      <h2 className="py-4 text-center text-red-800">Devis / Contact</h2>
+    <div className="w-full sm:w-[90%] mx-auto flex flex-col justify-center items-center">
+      <h2 className="py-4 text-center text-gray-100">Devis / Contact</h2>
       <form className="flex flex-col gap-2 w-full">
         <div>
           {/* <label hidden htmlFor="service">

@@ -1,14 +1,15 @@
-import Footer from "@components/footer/Footer";
 import { ThemeProvider } from "@components/theme-provider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@components/header/Header";
+// import NavbarNew from "@components/NavbarNew";
+import logo from "@public/assets/images/aswer-logo.png";
+import HeaderNew from "@components/HeaderNew";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ASWER Sécurité Incendie",
+  title: "Aswer Sécurité Incendie",
   description: "Sécurité incendie",
 };
 
@@ -27,9 +28,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="min-h-screen flex flex-col relative">
-            <Header />
+            {/* <NavbarNew /> */}
+            <HeaderNew />
             {children}
-            <Footer />
           </div>
         </ThemeProvider>
       </body>
