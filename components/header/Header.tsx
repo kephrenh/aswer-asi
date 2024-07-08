@@ -1,12 +1,13 @@
+import Form from "@components/Form";
+import logo from "@public/assets/images/aswer-logo.png";
 import Image from "next/image";
 import Contact from "../Contact";
-import logo from "@public/assets/images/aswer-logo.png";
-import Form from "@components/Form";
 
 const Header = () => {
   return (
-    <header className="w-full flex flex-col items-center bg-gradient-to-b lg:bg-gradient-to-b from-red-300 to-red-50">
+    <header className="w-full flex flex-col items-center">
       <Contact />
+
       <h1 className=" font-bold text-gray-800 text-center pt-8">
         Sécurité Incendie sur Paris et en Île-de-France{" "}
       </h1>

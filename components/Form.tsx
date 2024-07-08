@@ -1,51 +1,62 @@
 import { Button } from "./ui/button";
+import { Input } from "./ui/input";
+import { Label } from "./ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "./ui/select";
+import { Textarea } from "./ui/textarea";
 
 const Form = () => {
   return (
-    <div className="sm:w-[50%] mx-auto flex flex-col justify-center items-center">
+    <div className="w-full sm:w-[80%] mx-auto flex flex-col justify-center items-center">
       <h2 className="py-4 text-center text-red-800">Devis / Contact</h2>
       <form className="flex flex-col gap-2 w-full">
         <div>
-          <label
-            hidden
-            htmlFor="service">
+          {/* <label hidden htmlFor="service">
             Service:
           </label>
-          <select
-            className="pl-2 h-8 w-full bg-white "
-            id="service"
-            required>
-            <option
-              selected
-              value="devis">
+          <select className="pl-2 h-8 w-full bg-white " id="service" required>
+            <option selected value="devis">
               Demande de devis / tarifs
             </option>
             <option value="questions">Questions sur les services</option>
             <option value="autres">Autres</option>
-            {/* Add more options as needed */}
-          </select>
+          </select> */}
+          <Select>
+            <SelectTrigger>
+              <SelectValue placeholder="Que pouvons-nous faire pour vous?" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem defaultChecked value="devis">
+                Demande de devis/tarifs
+              </SelectItem>
+              <SelectItem value="services">
+                Questions sur nos services
+              </SelectItem>
+              <SelectItem value="autres">Autres</SelectItem>
+            </SelectContent>
+          </Select>
         </div>
         <div>
-          <label
-            hidden
-            htmlFor="name">
-            Nom:
-          </label>
-          <input
-            className="pl-2 h-8 w-full "
-            type="text"
+          <Label hidden htmlFor="name">
+            Nom Complet:
+          </Label>
+          <Input
             id="name"
-            placeholder="Votre nom complet..."
+            type="text"
             required
+            placeholder="Votre nom complet..."
           />
         </div>
         <div>
-          <label
-            hidden
-            htmlFor="societe">
+          <Label hidden htmlFor="societe">
             Société:
-          </label>
-          <input
+          </Label>
+          <Input
             className="pl-2 h-8 w-full "
             type="text"
             id="societe"
@@ -54,12 +65,10 @@ const Form = () => {
           />
         </div>
         <div>
-          <label
-            hidden
-            htmlFor="email">
+          <Label hidden htmlFor="email">
             Email:
-          </label>
-          <input
+          </Label>
+          <Input
             className="pl-2 h-8 w-full "
             type="email"
             id="email"
@@ -68,12 +77,10 @@ const Form = () => {
           />
         </div>
         <div>
-          <label
-            hidden
-            htmlFor="phone">
+          <Label hidden htmlFor="phone">
             Téléphone:
-          </label>
-          <input
+          </Label>
+          <Input
             className="pl-2 h-8 w-full "
             type="tel"
             id="phone"
@@ -81,33 +88,18 @@ const Form = () => {
             required
           />
         </div>
-        {/* <div>
-          <label
-            hidden
-            htmlFor="service">
-            Service:
-          </label>
-          <select
-            className="pl-2 h-8 w-full "
-            id="service"
-            required>
-            <option value="">Sélectionner un service</option>
-            <option value="incendie">Incendie</option>
-            <option value="securite">Sécurité</option>
-          </select>
-        </div> */}
+
         <div>
-          <label
-            hidden
-            htmlFor="message">
+          <Label hidden htmlFor="message">
             Message:
-          </label>
-          <textarea
+          </Label>
+          <Textarea
             className="pl-2 w-full"
             rows={5}
             id="message"
             placeholder="Votre message..."
-            required></textarea>
+            required
+          />
         </div>
         <Button className="text-xl mb-8">Envoyer</Button>
       </form>

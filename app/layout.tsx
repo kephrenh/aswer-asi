@@ -1,11 +1,9 @@
+import Footer from "@components/footer/Footer";
+import { ThemeProvider } from "@components/theme-provider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import bgImg from "../public/assets/images/asi-hero.webp";
 import "./globals.css";
-import Image from "next/image";
-import Footer from "@components/footer/Footer";
 import Header from "@components/header/Header";
-import Contact from "@components/Contact";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,11 +20,18 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={inter.className}>
-        <div className="min-h-screen flex flex-col">
-          <Header />
-          {children}
-          <Footer />
-        </div>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="min-h-screen flex flex-col relative">
+            <Header />
+            {children}
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
