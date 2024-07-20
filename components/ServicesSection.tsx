@@ -1,20 +1,23 @@
 import { services } from "@lib/data";
 import Image from "next/image";
+import asiImg from "@public/assets/images/aswer-si-nobg.png";
 
 const ServicesSection = () => {
   return (
     <section className="w-full gap-5 flex flex-col items-center">
-      <h2>Nos services</h2>
-      <div className="grid gap-8">
+      <div className="flex flex-col items-center gap-4">
+        <Image
+          src={asiImg}
+          alt="image sécurité incendie"
+          width={300}
+          height={300}
+          className="rounded-full"
+        />
+        <h2 className="text-4xl">Nos services</h2>
+      </div>
+      <div className="grid gap-8 px-8 md:px-0">
         {services.map((service) => (
           <article
-            // style={{
-            //   backgroundImage: `url(${service.image})`,
-            //   backgroundSize: "cover",
-            //   backgroundPosition: "center",
-            //   backgroundRepeat: "no-repeat",
-            //   filter: "brightness(50%)",
-            // }}
             key={service.id}
             className="flex group flex-col h-auto items-center gap-4 relative rounded-lg bg-gray-200">
             <div className="absolute w-full h-full">
