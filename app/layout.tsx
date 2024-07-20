@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@components/theme-provider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 // import NavbarNew from "@components/NavbarNew";
 import logo from "@public/assets/images/aswer-logo.png";
@@ -47,12 +48,16 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange>
-          <div className="min-h-screen flex flex-col relative">
+          <div className="min-h-screen flex flex-col">
             {/* <NavbarNew /> */}
             <HeaderNew />
             {children}
             <Footer />
           </div>
+          <Toaster
+            position="top-right"
+            toastOptions={{ duration: 2000 }}
+          />
         </ThemeProvider>
       </body>
     </html>
