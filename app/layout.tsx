@@ -11,7 +11,12 @@ import Footer from "@components/footer/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Aswer Sécurité Incendie",
+  metadataBase: new URL("https://aswer-securite-incendie.vercel.app/"),
+  title: {
+    default: "Aswer Sécurité Incendie",
+    template: `%s | Aswer Sécurité Incendie`,
+  },
+
   description: "Service de sécurité incendie et d'aide aux personnes à Paris et en Île-de-France",
   icons: {
     icon: "/assets/images/aswer-logo.png",
@@ -19,13 +24,13 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-    url: "https://www.aswersecuriteincendie.com",
+    url: "https://aswer-securite-incendie.vercel.app/",
     title: "Aswer Sécurité Incendie",
     description:
       "Service de sécurité incendie et d'aide aux personnes à Paris et en ��le-de-France",
     images: [
       {
-        url: `${logo}`,
+        url: "/assets/images/aswer-logo.png",
         width: 1200,
         height: 630,
       },
