@@ -7,6 +7,7 @@ import "./globals.css";
 import logo from "@public/assets/images/aswer-logo.png";
 import HeaderNew from "@components/HeaderNew";
 import Footer from "@components/footer/Footer";
+import Contact from "@components/Contact";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -53,9 +54,12 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange>
-          <div className="min-h-screen flex flex-col">
+          <div className="min-h-screen bg-gray-100 flex flex-col">
             {/* <NavbarNew /> */}
-            <HeaderNew />
+            <Contact />
+            <div className="px-16 mt-16">
+              <HeaderNew />
+            </div>
             {children}
             <Footer />
           </div>

@@ -4,7 +4,7 @@ import asiImg from "@public/assets/images/aswer-si-nobg.png";
 
 const ServicesSection = () => {
   return (
-    <section className="w-full gap-5 flex flex-col items-center">
+    <section className="w-full gap-5 flex flex-col items-center px-16 lg:px-0 shadow-md shadow-gray-300 rounded-lg pb-32">
       <div className="flex flex-col items-center gap-4">
         <Image
           src={asiImg}
@@ -19,7 +19,7 @@ const ServicesSection = () => {
         {services.map((service) => (
           <article
             key={service.id}
-            className="flex group flex-col h-auto items-center gap-4 relative rounded-lg bg-gray-200">
+            className="flex group flex-col justify-center h-auto items-center gap-4 relative rounded-lg bg-gray-200">
             <div className="absolute w-full h-full">
               <Image
                 src={service.image}
