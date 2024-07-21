@@ -1,6 +1,4 @@
-import Banner from "@components/Banner";
 import ServicesSection from "@components/ServicesSection";
-import { Button } from "@components/ui/button";
 
 export default function Home() {
   return (
