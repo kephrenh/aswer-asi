@@ -14,6 +14,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "./ui/dialog";
+import Link from "next/link";
 
 const HeaderNew = () => {
   return (
@@ -28,7 +29,7 @@ const HeaderNew = () => {
         className="fixed w-full h-full object-cover"
       /> */}
 
-      <div className="h-full grid lg:grid-cols-2 gap-32 ">
+      <div className="h-full grid lg:grid-cols-2 gap-32">
         <div className="flex w-full flex-col text-gray-900 items-center justify-center ">
           <div>
             <Image
@@ -36,12 +37,15 @@ const HeaderNew = () => {
               width={420}
               height={420}
               alt="aswer logo"
+              className="pointer-events-none"
             />
           </div>
           <div className="text-center w-[75%] text-gray-700 ">
-            <h1>Aswer Sécurité Incendie</h1>
-            <h2>{"Service de sécurité incendie & d'aide aux personnes"}</h2>
-            <div className=" flex font-bold justify-center my-1 gap-2 text-red-800">
+            <h1 className="pointer-events-none">Aswer Sécurité Incendie</h1>
+            <h2 className="pointer-events-none">
+              {"Service de sécurité incendie & d'aide aux personnes"}
+            </h2>
+            <div className=" flex flex-col items-center sm:flex-row font-bold sm:justify-center my-1 gap-2 text-red-800">
               <Button
                 className="bg-red-700 hover:bg-red-600 transition-all mt-6 flex items-center gap-1 duration-300"
                 asChild>
@@ -49,7 +53,7 @@ const HeaderNew = () => {
                   <Phone size={15} /> 06.19.90.82.73
                 </a>
               </Button>
-              <div className="block lg:hidden mb-16 lg:mb-0">
+              <div className="block lg:hidden lg:mb-0">
                 <Dialog>
                   <DialogTrigger asChild>
                     <Button className="hover:bg-blue-600 bg-blue-700 transition-all mt-6 duration-300">
