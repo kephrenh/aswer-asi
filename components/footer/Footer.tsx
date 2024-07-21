@@ -20,7 +20,9 @@ const Footer: React.FC = () => {
   }, []);
 
   return (
-    <footer className=" flex flex-col justify-center bg-gray-100 z-50 text-gray-900 w-full">
+    <footer
+      id="contact"
+      className=" flex flex-col justify-center bg-gray-100 text-gray-900 w-full">
       <h2 className="text-center tracking-widest z-50 mt-4 mb-8 md:mb-1">Contactez-nous</h2>
       <div className="pb-16 px-16">
         <address className="mx-auto w-full grid justify-center lg:flex lg:items-center shadow-lg pb-8 shadow-gray-300 rounded-lg ">
@@ -90,22 +92,6 @@ const Footer: React.FC = () => {
       <div className="text-center text-sm py-4 text-gray-50 bg-gray-900 z-50">
         <p>Copyright © 2024 - Tous droits réservés par Aswer Sécurité Incendie</p>
         <p>SIREN: 917 945 495</p>
-        {/* <ul className="flex justify-center gap-2">
-          <li>
-            <Link
-              className="underline"
-              href="/politique-de-confidentalite">
-              <h3>Politique de confidentialité</h3>
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="underline"
-              href="/mentions-legales">
-              <h3>Mentions légales</h3>
-            </Link>
-          </li>
-        </ul> */}
       </div>
       <div
         className={`fixed bottom-8 right-8 hover:bg-blue-700/85 rounded-full transition-all duration-300 z-50 p-2 bg-blue-900/85 text-gray-100 cursor-pointer ${
