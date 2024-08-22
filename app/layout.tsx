@@ -60,7 +60,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange>
           <div className="min-h-screen bg-gray-100 flex flex-col">
-            {/* <NavbarNew /> */}
             <Contact />
             <div className="px-16 mt-16">
               <HeaderNew />
