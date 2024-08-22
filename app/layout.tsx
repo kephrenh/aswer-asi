@@ -12,7 +12,11 @@ import Contact from "@components/Contact";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Aswer Sécurité Incendie à 93100 Montreuil - SIREN 917 945 485 R.C.S. Bobigny",
+  metadataBase: new URL("https://aswer-securite-incendie.vercel.app/"),
+  title: {
+    default: "Aswer Sécurité Incendie à 93100 Montreuil - SIREN 917 945 485 R.C.S. Bobigny",
+    template: "%s | Aswer Sécurité Incendie",
+  },
   description: "Service de sécurité incendie et d'aide aux personnes en Ile-de-France",
   icons: {
     icon: "/assets/images/aswer-logo.png",
@@ -25,7 +29,7 @@ export const metadata: Metadata = {
     description: "Service de sécurité incendie et d'aide aux personnes en Ile-de-France",
     images: [
       {
-        url: `${logo}`,
+        url: "/assets/images/aswer-logo.png",
         width: 1260,
         height: 800,
         alt: "Aswer Sécurité Incendie",
