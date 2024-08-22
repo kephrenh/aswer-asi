@@ -18,8 +18,7 @@ export const metadata: Metadata = {
   creator: "Mohamed Amoussa",
   publisher: "Mohamed Amoussa",
   referrer: "origin-when-cross-origin",
-  robots: "index, follow",
-  themeColor: "#1A202C",
+  robots: { index: true, follow: true },
   title: {
     default: "Aswer Sécurité Incendie à 93100 Montreuil - SIREN 917 945 485",
     template: "%s | Aswer Sécurité Incendie",
