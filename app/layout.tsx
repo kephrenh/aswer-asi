@@ -13,6 +13,13 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://aswer-securite-incendie.vercel.app/"),
+  keywords: ["sécurité incendie", "sécurité", "montreuil", "93100"],
+  authors: [{ name: "Mohamed Amoussa", url: "https://www.linkedin.com/in/mohamed-amoussa" }],
+  creator: "Mohamed Amoussa",
+  publisher: "Mohamed Amoussa",
+  referrer: "origin-when-cross-origin",
+  robots: "index, follow",
+  themeColor: "#1A202C",
   title: {
     default: "Aswer Sécurité Incendie à 93100 Montreuil - SIREN 917 945 485 R.C.S. Bobigny",
     template: "%s | Aswer Sécurité Incendie",
