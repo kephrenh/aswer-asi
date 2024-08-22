@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
 // import NavbarNew from "@components/NavbarNew";
-import logo from "@public/assets/images/asi-incendie.jpg";
+import logo from "@public/assets/images/asi-logo-bg.jpg";
 import HeaderNew from "@components/HeaderNew";
 import Footer from "@components/footer/Footer";
 import Contact from "@components/Contact";
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   robots: "index, follow",
   themeColor: "#1A202C",
   title: {
-    default: "Aswer Sécurité Incendie à 93100 Montreuil - SIREN 917 945 485 R.C.S. Bobigny",
+    default: "Aswer Sécurité Incendie à 93100 Montreuil - SIREN 917 945 485",
     template: "%s | Aswer Sécurité Incendie",
   },
   description: "Service de sécurité incendie et d'aide aux personnes en Ile-de-France",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://aswer-securite-incendie.vercel.app/",
-    title: "Aswer Sécurité Incendie à 93100 Montreuil - SIREN 917 945 485 R.C.S. Bobigny",
+    title: "Aswer Sécurité Incendie à 93100 Montreuil - SIREN 917 945 485",
     description: "Service de sécurité incendie et d'aide aux personnes en Ile-de-France",
     images: [
       {
