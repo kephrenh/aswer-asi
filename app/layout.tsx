@@ -12,13 +12,8 @@ import Contact from "@components/Contact";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://aswer-securite-incendie.vercel.app/"),
-  title: {
-    default: "Aswer Sécurité Incendie",
-    template: `%s | Aswer Sécurité Incendie`,
-  },
-
-  description: "Service de sécurité incendie et d'aide aux personnes à Paris et en Île-de-France",
+  title: "Aswer Sécurité Incendie à 93100 Montreuil - SIREN 917 945 485 R.C.S. Bobigny",
+  description: "Service de sécurité incendie et d'aide aux personnes en Ile-de-France",
   icons: {
     icon: "/assets/images/aswer-logo.png",
   },
@@ -26,14 +21,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://aswer-securite-incendie.vercel.app/",
-    title: "Aswer Sécurité Incendie",
-    description:
-      "Service de sécurité incendie et d'aide aux personnes à Paris et en ��le-de-France",
+    title: "Aswer Sécurité Incendie à 93100 Montreuil - SIREN 917 945 485 R.C.S. Bobigny",
+    description: "Service de sécurité incendie et d'aide aux personnes en Ile-de-France",
     images: [
       {
-        url: "/assets/images/aswer-logo.png",
-        width: 1200,
-        height: 630,
+        url: `${logo}`,
+        width: 1260,
+        height: 800,
+        alt: "Aswer Sécurité Incendie",
       },
     ],
     siteName: "Aswer Sécurité Incendie",
@@ -63,10 +58,7 @@ export default function RootLayout({
             {children}
             <Footer />
           </div>
-          <Toaster
-            position="top-right"
-            toastOptions={{ duration: 2000 }}
-          />
+          <Toaster position="top-right" toastOptions={{ duration: 2000 }} />
         </ThemeProvider>
       </body>
     </html>
