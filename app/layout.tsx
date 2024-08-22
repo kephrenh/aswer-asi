@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: "Service de sécurité incendie et d'aide aux personnes en Ile-de-France",
     images: [
       {
-        url: "/assets/images/aswer-logo.png",
+        url: logo.src,
         width: 1260,
         height: 800,
         alt: "Aswer Sécurité Incendie",
