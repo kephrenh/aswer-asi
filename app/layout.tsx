@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
 // import NavbarNew from "@components/NavbarNew";
-import logo from "@public/assets/images/aswer-logo.png";
+import logo from "@public/assets/images/asi-incendie.jpg";
 import HeaderNew from "@components/HeaderNew";
 import Footer from "@components/footer/Footer";
 import Contact from "@components/Contact";
