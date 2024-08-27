@@ -58,31 +58,23 @@ export default function RootLayout({
       <head>
         <Script id="schema-org-markup-website" type="application/ld+json">
           {`
-            {
               "@context": "http://schema.org",
               "@type": "ProfessionalService",
               "name": "Aswer Sécurité Incendie à 93100 Montreuil - SIREN 917 945 485",
-              "url": "https://aswer-securite-incendie.vercel.app/",
+              "url": "https://aswersecuriteincendie.vercel.app/",
               "image": "${logo.src}",
               "description": "Système de sécurité incendie pour les entreprises et les particuliers.",
               "address": {
-              
-              "@type": "PostalAddress",
+                "@type": "PostalAddress",
                 "streetAddress": "56 rue Rochebrune",
                 "addressLocality": "Montreuil",
                 "addressRegion": "Ile-de-France",
                 "postalCode": "93100",
                 "addressCountry": "France"
-                }
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "contactType": "customer service",
-                "areaServed": "Région Parisienne",
-                "email": "contact@aswer-securite-incendie.fr",
-                "telephone": "+33 1 23 45 67 89"
-                }
-            }
-          `}
+              },
+              "telephone": "+33 6 19 90 82 73"
+              
+            `}
         </Script>
       </head>
       <body className={inter.className}>
