@@ -14,7 +14,7 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://aswer-securite-incendie.vercel.app/"),
+  metadataBase: new URL("https://aswersecuriteincendie.vercel.app/"),
   keywords: ["sécurité incendie", "sécurité", "montreuil", "93100"],
   authors: [{ name: "Mohamed Amoussa", url: "https://www.linkedin.com/in/mohamed-amoussa" }],
   creator: "Mohamed Amoussa",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-    url: "https://aswer-securite-incendie.vercel.app/",
+    url: "https://aswersecuriteincendie.vercel.app/",
     title: "Aswer Sécurité Incendie à 93100 Montreuil - SIREN 917 945 485",
     description: "Service de sécurité incendie et d'aide aux personnes en Ile-de-France",
     images: [
@@ -58,6 +58,7 @@ export default function RootLayout({
       <head>
         <Script id="schema-org-markup-website" type="application/ld+json">
           {`
+            {
               "@context": "http://schema.org",
               "@type": "ProfessionalService",
               "name": "Aswer Sécurité Incendie à 93100 Montreuil - SIREN 917 945 485",
@@ -72,8 +73,8 @@ export default function RootLayout({
                 "postalCode": "93100",
                 "addressCountry": "France"
               },
-              "telephone": "+33 6 19 90 82 73"
-              
+                "telephone": "+33 6 19 90 82 73"
+              }
             `}
         </Script>
       </head>
