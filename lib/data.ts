@@ -15,21 +15,21 @@ const services = [
   },
 
   {
-    id: "service3",
+    id: "service4",
     name: "Intervention sur alarme",
     image: "/assets/images/asi-alarm.jpeg",
     alt: "photo d'une main déclenchant un alarme",
     desc: "En cas de déclenchement de votre alarme, nous intervenons rapidement.",
   },
   {
-    id: "service4",
+    id: "service5",
     name: "Vente de matériel de sécurité",
     image: "/assets/images/asi-hero2.webp",
     alt: "photo d'équipements de sécurité",
     desc: "Selon vos besoins, nous vous fournissons en matériels de sécurité.",
   },
   {
-    id: "service5",
+    id: "service6",
     name: "Gardiennage et surveillance de sites",
     image: "/assets/images/asi-gardien.jpg",
     alt: "photo d'un agent de sécurité avec une station de radio",
