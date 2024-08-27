@@ -5,6 +5,7 @@ import { Toaster } from "react-hot-toast";
 import "./globals.css";
 // import NavbarNew from "@components/NavbarNew";
 import logo from "@public/assets/images/asi-logo-bg.jpg";
+import icon from "../favicon.ico";
 import HeaderNew from "@components/HeaderNew";
 import Footer from "@components/footer/Footer";
 import Contact from "@components/Contact";
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
   },
   description: "Service de sécurité incendie et d'aide aux personnes en Ile-de-France",
   icons: {
-    icon: "/assets/images/aswer-logo.png",
+    icon: icon.src,
   },
 
   openGraph: {
@@ -59,11 +60,20 @@ export default function RootLayout({
           {`
             {
               "@context": "http://schema.org",
-              "@type": "Organization",
+              "@type": "ProfessionalService",
               "name": "Aswer Sécurité Incendie à 93100 Montreuil - SIREN 917 945 485",
               "url": "https://aswer-securite-incendie.vercel.app/",
-              "logo": "${logo.src}",
+              "image": "${logo.src}",
               "description": "Système de sécurité incendie pour les entreprises et les particuliers.",
+              "address": {
+              
+              "@type": "PostalAddress",
+                "streetAddress": "56 rue Rochebrune",
+                "addressLocality": "Montreuil",
+                "addressRegion": "Ile-de-France",
+                "postalCode": "93100",
+                "addressCountry": "France"
+                }
               "contactPoint": {
                 "@type": "ContactPoint",
                 "contactType": "customer service",
