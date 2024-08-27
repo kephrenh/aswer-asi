@@ -8,6 +8,7 @@ import logo from "@public/assets/images/asi-logo-bg.jpg";
 import HeaderNew from "@components/HeaderNew";
 import Footer from "@components/footer/Footer";
 import Contact from "@components/Contact";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -53,6 +54,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
+      <head>
+        <Script id="schema-org-markup-website" type="application/ld+json">
+          {`
+          {
+          "@context": "http://schema.org",
+          "@type": "Organization",
+          "name": "Aswer Sécurité Incendie",
+          "url": "https://aswer-securite-incendie.vercel.app/",
+          "logo": "${logo.src}",
+          "description": "Service de sécurité incendie et d'aide aux personnes en Ile-de-France",
+          "contactPoint": {
+          "@type": "ContactPoint",
+            "contactType": "customer service",
+            "areaServed": "Montreuil, 93100",
+            "email": "contact@aswer-securite-incendie.fr",
+            "telephone": "+33 1 23 45 67 89"
+            }
+
+          `}
+        </Script>
+      </head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
