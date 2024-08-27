@@ -26,8 +26,12 @@ export const metadata: Metadata = {
     template: "%s | Aswer Sécurité Incendie",
   },
   description: "Service de sécurité incendie et d'aide aux personnes en Ile-de-France",
+
   icons: {
     icon: icon.src,
+  },
+  verification: {
+    google: "SIbIkcgtyFwYvw1L5OjAN3hWc5OkRRRYI2bAtZJJATM",
   },
 
   openGraph: {
@@ -35,6 +39,7 @@ export const metadata: Metadata = {
     url: "https://aswersecuriteincendie.vercel.app/",
     title: "Aswer Sécurité Incendie à 93100 Montreuil - SIREN 917 945 485",
     description: "Service de sécurité incendie et d'aide aux personnes en Ile-de-France",
+
     images: [
       {
         url: logo.src,
@@ -71,7 +76,7 @@ export default function RootLayout({
                 "addressLocality": "Montreuil",
                 "addressRegion": "Ile-de-France",
                 "postalCode": "93100",
-                "addressCountry": "France"
+                "addressCountry": "FR"
               },
                 "telephone": "+33 6 19 90 82 73"
               }
