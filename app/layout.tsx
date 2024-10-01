@@ -31,11 +31,8 @@ export const metadata: Metadata = {
   description:
     "Service de sécurité incendie et d'aide aux personnes en Ile-de-France",
 
-  // icons: {
-  //   icon: icon.src,
-  // },
   verification: {
-    google: "SIbIkcgtyFwYvw1L5OjAN3hWc5OkRRRYI2bAtZJJATM",
+    google: "ACeUo59BRflX6PsmBYOEHhUw1sa0SfYUD0eEkGuI4Tc",
   },
 
   openGraph: {
