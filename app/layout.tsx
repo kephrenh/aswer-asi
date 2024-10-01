@@ -8,6 +8,7 @@ import Footer from "@components/footer/Footer";
 import Contact from "@components/Contact";
 import Script from "next/script";
 import thumbnail from "../public/assets/images/asi-logo-bg.jpg";
+import favicon from "./favicon.ico";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,7 +35,9 @@ export const metadata: Metadata = {
   verification: {
     google: "ACeUo59BRflX6PsmBYOEHhUw1sa0SfYUD0eEkGuI4Tc",
   },
-
+  icons: {
+    icon: favicon.src,
+  },
   openGraph: {
     type: "website",
     url: "https://aswersecuriteincendie.fr/",
