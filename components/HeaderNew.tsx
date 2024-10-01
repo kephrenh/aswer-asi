@@ -20,15 +20,8 @@ const HeaderNew = () => {
   return (
     <header
       id="accueil"
-      className="min-h-screen mb-16 flex justify-center px-16 items-center bg-gray-100 shadow-lg shadow-gray-300 rounded-lg">
-      {/* <Image
-        alt="aswer hero"
-        src={hero}
-        width={360}
-        height={360}
-        className="fixed w-full h-full object-cover"
-      /> */}
-
+      className="min-h-screen mb-16 flex justify-center px-16 items-center bg-gray-100 shadow-lg shadow-gray-300 rounded-lg"
+    >
       <div className="h-full grid lg:grid-cols-2 gap-32">
         <div className="flex w-full flex-col text-gray-900 items-center justify-center ">
           <div>
@@ -48,7 +41,8 @@ const HeaderNew = () => {
             <div className=" flex flex-col items-center sm:flex-row font-bold sm:justify-center my-1 gap-2 text-red-800">
               <Button
                 className="bg-red-700 hover:bg-red-600 transition-all mt-6 flex items-center gap-1 duration-300"
-                asChild>
+                asChild
+              >
                 <a href="tel:+33619908273">
                   <Phone size={15} /> 06.19.90.82.73
                 </a>
@@ -63,14 +57,14 @@ const HeaderNew = () => {
                   <DialogContent className="sm:max-w-md">
                     <DialogHeader>
                       <DialogTitle>Remplissez le formulaire</DialogTitle>
-                      <DialogDescription>Tous les champs sont requis</DialogDescription>
+                      <DialogDescription>
+                        Tous les champs sont requis
+                      </DialogDescription>
                     </DialogHeader>
                     <Form />
                     <DialogFooter className="sm:justify-start">
                       <DialogClose asChild>
-                        <Button
-                          type="button"
-                          variant="destructive">
+                        <Button type="button" variant="destructive">
                           Fermer
                         </Button>
                       </DialogClose>
