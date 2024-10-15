@@ -3,7 +3,13 @@ import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "./ui/select";
 import { Textarea } from "./ui/textarea";
 import { useForm, ValidationError } from "@formspree/react";
 import toast from "react-hot-toast";
@@ -11,9 +17,7 @@ import toast from "react-hot-toast";
 const Form = () => {
   const [state, handleSubmit] = useForm("mnnqqbwb");
 
-  const [textColor, setTextColor] = useState<"text-muted-foreground" | "text-gray-100">(
-    "text-gray-100"
-  );
+  const [textColor, setTextColor] = useState<"text-muted-foreground" | "text-gray-100">("text-gray-100");
 
   useEffect(() => {
     const handleResize = () => {
@@ -54,7 +58,8 @@ const Form = () => {
       onSubmit={handleSubmit}
       method="POST"
       id="form"
-      className="flex flex-col gap-2 w-full">
+      className="flex flex-col gap-2 w-full"
+    >
       <div>
         
         <Select name="service">
@@ -62,12 +67,12 @@ const Form = () => {
             <SelectValue placeholder="Que pouvons-nous faire pour vous?" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem
-              defaultChecked
-              value="Demande de devis/tarifs">
+            <SelectItem defaultChecked value="Demande de devis/tarifs">
               Demande de devis/tarifs
             </SelectItem>
-            <SelectItem value="Questions sur nos services">Questions sur nos services</SelectItem>
+            <SelectItem value="Questions sur nos services">
+              Questions sur nos services
+            </SelectItem>
             <SelectItem value="Autres">Autres</SelectItem>
           </SelectContent>
         </Select>
@@ -78,9 +83,7 @@ const Form = () => {
         />
       </div>
       <div>
-        <Label
-          hidden
-          htmlFor="name">
+        <Label hidden htmlFor="name">
           Nom Complet:
         </Label>
         <Input
@@ -90,16 +93,10 @@ const Form = () => {
           required
           placeholder="Votre nom complet..."
         />
-        <ValidationError
-          prefix="Name"
-          field="name"
-          errors={state.errors}
-        />
+        <ValidationError prefix="Name" field="name" errors={state.errors} />
       </div>
       <div>
-        <Label
-          hidden
-          htmlFor="societe">
+        <Label hidden htmlFor="societe">
           Société:
         </Label>
         <Input
@@ -117,9 +114,7 @@ const Form = () => {
         />
       </div>
       <div>
-        <Label
-          hidden
-          htmlFor="email">
+        <Label hidden htmlFor="email">
           Email:
         </Label>
         <Input
@@ -130,16 +125,10 @@ const Form = () => {
           placeholder="Votre adresse e-mail"
           required
         />
-        <ValidationError
-          prefix="Email"
-          field="email"
-          errors={state.errors}
-        />
+        <ValidationError prefix="Email" field="email" errors={state.errors} />
       </div>
       <div>
-        <Label
-          hidden
-          htmlFor="phone">
+        <Label hidden htmlFor="phone">
           Téléphone:
         </Label>
         <Input
@@ -158,9 +147,7 @@ const Form = () => {
       </div>
 
       <div>
-        <Label
-          hidden
-          htmlFor="message">
+        <Label hidden htmlFor="message">
           Message:
         </Label>
         <Textarea
@@ -172,22 +159,17 @@ const Form = () => {
           required
         />
         <ValidationError
-          prefix=""
-          field=""
+          prefix="Message"
+          field="message"
           errors={state.errors}
         />
       </div>
-      <div>
-        <p className={`text-sm ${textColor} pl-2`}>
-          {
-            "En soumettant ce formulaire, j'accepte que les informations saisies soient stockées et utilisées pour permettre la bonne prise en charge de ma demande."
-          }
-        </p>
-      </div>
+
       <Button
         type="submit"
         disabled={state.submitting}
-        className="text-sm mb-8">
+        className="text-sm my-8"
+      >
         {buttonText}
       </Button>
     </form>

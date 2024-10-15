@@ -1,10 +1,11 @@
-import { baseURL } from "@lib/utils";
+
+import { BASE_URL } from "@lib/constants";
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: `${baseURL}/`,
+      url: `${BASE_URL}/`,
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 1,

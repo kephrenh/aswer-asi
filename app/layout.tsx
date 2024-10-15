@@ -3,20 +3,24 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
-// import NavbarNew from "@components/NavbarNew";
-import logo from "@public/assets/images/asi-logo-bg.jpg";
-import icon from "../favicon.ico";
 import HeaderNew from "@components/HeaderNew";
 import Footer from "@components/footer/Footer";
 import Contact from "@components/Contact";
 import Script from "next/script";
+import thumbnail from "../public/assets/images/asi-logo-bg.jpg";
+import favicon from "./favicon.ico";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://aswersecuriteincendie.vercel.app/"),
+  metadataBase: new URL("https://aswersecuriteincendie.fr/"),
   keywords: ["sécurité incendie", "sécurité", "montreuil", "93100"],
-  authors: [{ name: "Mohamed Amoussa", url: "https://www.linkedin.com/in/mohamed-amoussa" }],
+  authors: [
+    {
+      name: "Mohamed Amoussa",
+      url: "https://www.linkedin.com/in/mohamed-amoussa",
+    },
+  ],
   creator: "Mohamed Amoussa",
   publisher: "Mohamed Amoussa",
   referrer: "origin-when-cross-origin",
@@ -25,24 +29,25 @@ export const metadata: Metadata = {
     default: "Aswer Sécurité Incendie à 93100 Montreuil - SIREN 917 945 485",
     template: "%s | Aswer Sécurité Incendie",
   },
-  description: "Service de sécurité incendie et d'aide aux personnes en Ile-de-France",
+  description:
+    "Service de sécurité incendie et d'aide aux personnes en Ile-de-France",
 
-  icons: {
-    icon: icon.src,
-  },
   verification: {
-    google: "SIbIkcgtyFwYvw1L5OjAN3hWc5OkRRRYI2bAtZJJATM",
+    google: "ACeUo59BRflX6PsmBYOEHhUw1sa0SfYUD0eEkGuI4Tc",
   },
-
+  icons: {
+    icon: favicon.src,
+  },
   openGraph: {
     type: "website",
-    url: "https://aswersecuriteincendie.vercel.app/",
+    url: "https://aswersecuriteincendie.fr/",
     title: "Aswer Sécurité Incendie à 93100 Montreuil - SIREN 917 945 485",
-    description: "Service de sécurité incendie et d'aide aux personnes en Ile-de-France",
+    description:
+      "Service de sécurité incendie et d'aide aux personnes en Ile-de-France",
 
     images: [
       {
-        url: logo.src,
+        url: thumbnail.src,
         width: 1260,
         height: 800,
         alt: "Aswer Sécurité Incendie",
@@ -68,7 +73,7 @@ export default function RootLayout({
               "@type": "ProfessionalService",
               "name": "Aswer Sécurité Incendie à 93100 Montreuil - SIREN 917 945 485",
               "url": "https://aswersecuriteincendie.vercel.app/",
-              "image": "${logo.src}",
+              "image": "${thumbnail.src}",
               "description": "Système de sécurité incendie pour les entreprises et les particuliers.",
               "address": {
                 "@type": "PostalAddress",
@@ -88,7 +93,8 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="system"
           enableSystem
-          disableTransitionOnChange>
+          disableTransitionOnChange
+        >
           <div className="min-h-screen bg-gray-100 flex flex-col">
             <Contact />
             <div className="px-16 mt-16">
