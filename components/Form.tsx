@@ -9,7 +9,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import toast from "react-hot-toast";
 
 const Form = () => {
-  const [state, handleSubmit] = useForm("xanwnodq");
+  const [state, handleSubmit] = useForm("mnnqqbwb");
 
   const [textColor, setTextColor] = useState<"text-muted-foreground" | "text-gray-100">(
     "text-gray-100"
@@ -52,21 +52,11 @@ const Form = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      action="https://formspree.io/f/xanwnodq"
       method="POST"
       id="form"
       className="flex flex-col gap-2 w-full">
       <div>
-        {/* <label hidden htmlFor="service">
-            Service:
-          </label>
-          <select className="pl-2 h-8 w-full bg-white " id="service" required>
-            <option selected value="devis">
-              Demande de devis / tarifs
-            </option>
-            <option value="questions">Questions sur les services</option>
-            <option value="autres">Autres</option>
-          </select> */}
+        
         <Select name="service">
           <SelectTrigger>
             <SelectValue placeholder="Que pouvons-nous faire pour vous?" />
